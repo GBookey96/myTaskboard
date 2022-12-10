@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My tasks</title>
+
+    <!-- My own CSS and JS -->
+    <script defer src="js.js"></script>    
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS and JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Google Fonts CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Covered+By+Your+Grace&family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+
+
+    
+</head>
+<body>
+    <!-- header -->
+    <div class="container text-center">
+            <h1 id="header">
+                My Task Board
+            </h1>
+
+            <!-- entry form -->
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-7" id="taskEntry">
+                <form onsubmit="return false" id="enterNewTask">
+                    <h2 id="taskEntryFormHeader">Enter new task</h2>
+                    <br>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text taskEntryFormLabel" id="taskDetailsLabel">Task Details</span>
+                        <textarea id="formTaskDetails" class="form-control taskEntryFormFields" onfocus="resetColors()"></textarea>
+                    </div>
+                    <br>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text taskEntryFormLabel" id="taskDueLabel">Due by (date and time)</span>
+                        <input type="date" id="formTaskDueDate" class="form-control taskEntryFormFields" onfocus="resetColors()">
+                        <input type="time" id="formTaskDueTime" class="form-control taskEntryFormFields" onfocus="resetColors()">
+                    </div>
+                    <button type="submit" class="btn btn-success" onclick="addTask()">Submit</button>
+                    <button type="button" class="btn btn-danger" onclick="resetFormButton()">Reset</button>
+                </form>
+            </div>
+            <div class="col"></div>
+        </div>
+        <!-- display tasks in this section -->
+        <div id="myTasks">
+
+            
+
+        </div>
+        <!-- footer -->
+        <p id="footer">
+            &#169 2022 Gershon Bookey
+        </p>
+    </div>
+</body>
+</html>

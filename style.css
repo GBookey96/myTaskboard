@@ -1,0 +1,102 @@
+body {
+    background-image: url("pics/corkboard.jpg");
+    padding: 50px;
+}
+
+#header {
+    font-family: 'Gloria Hallelujah', cursive;
+    margin-bottom: 50px;
+}
+
+#taskEntry {
+    background-image: url("pics/lined_paper.png");
+    background-size:cover;
+    padding-left: 9%;
+    padding-right: 9%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#taskEntryFormHeader {
+    font-family: 'Bangers', cursive;
+}
+
+.taskEntryFormLabel {
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 1.3em !important;
+}
+
+.taskEntryForm {
+    background-color: transparent !important;
+    width: 100%;
+}
+
+#myTasks {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stickyNote {
+    width: 30%;
+    color: black;
+    border: 0px !important;
+    margin: 1%;
+    animation: fadeIn 2s;
+}
+
+.deleteTask {
+    position: absolute;
+    top: 16%;
+    right: 10%;
+    opacity: 0;
+    z-index: 999;
+    color: crimson;
+}
+
+.deleteTask:hover {
+    opacity: 1;
+    animation: fadeIn ;
+    color: crimson
+}
+
+.taskText {
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 1.3em !important;
+}
+
+.taskName {
+    font-size: 2em !important;
+    padding-top: 12% !important;
+    text-align: center;
+}
+
+.taskDetails {
+    overflow: auto;
+    height: 60%;
+    padding-right: 11%;
+    padding-left: 11%;
+}
+
+.taskDue {
+    position: absolute;
+    bottom: 12%;
+    left: 12%;
+    font-size: 1em;
+}
+
+.dueDetails {
+    color: crimson;
+}
+
+#footer {
+    margin: 50px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }    
+    100% {
+        opacity: 1;
+    }
+}
